@@ -11,15 +11,13 @@ public class RuckSack implements Listener {
 	public void Rucksack(PlayerInteractEvent event) {
 		
 		Player player = event.getPlayer();
-		String Playername = player.getName();
-		
-		
+		String Playername = player.getName();		
 		
 		 if (player.getItemInHand().getType() == Material.CHEST) {
 			 if (event.getAction() == Action.RIGHT_CLICK_AIR) {
 		 }
 		if(!player.hasPermission("MineZ.Rucksack")) {
-			event.setCancelled(true);
+			//event.setCancelled(true); Überflüssig, warum eine Animation, die nichts bringt, canceln?
 			return;
 			
 			

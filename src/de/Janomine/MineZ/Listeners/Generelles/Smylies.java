@@ -8,12 +8,8 @@ public class Smylies implements Listener {
 	
 	@EventHandler
 	
-	public void Smylies(AsyncPlayerChatEvent event) {
-		
-		if(event.getMessage().contains(":D")) {
-			event.getMessage().replaceAll(":D", "TEST");
-			
-		}
-	}
+	public void Smylies(AsyncPlayerChatEvent event) {		
+			event.setMessage(event.getMessage().replaceAll(":D", "TEST")); //fixed.
+			}
 
 }

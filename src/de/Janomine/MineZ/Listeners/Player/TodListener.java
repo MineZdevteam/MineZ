@@ -25,8 +25,7 @@ public class TodListener implements Listener {
 	      String Playername = player.getName();
 	      if (!player.hasPermission("MineZ.Tod.Nokick") || (player.isOp())) {
 	    	  ((PlayerDeathEvent) event).setDeathMessage(ChatColor.GOLD + Playername + ChatColor.RED + " ist Gestorben.");
-	    	  player.kickPlayer(ChatColor.RED + "Du bist Gestorben!");
-	    	  
+	    	  player.kickPlayer(ChatColor.RED + "Du bist Gestorben!");	    	  
 	    	  player.remove();
 	        return;
 	      }

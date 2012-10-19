@@ -40,9 +40,7 @@ public class main extends JavaPlugin {
 	
 	
 	public void onDisable() {
-		this.log.warning("[MineZ] System wurde heruntergefahren.");
-		
-		
+		this.log.warning("[MineZ] System wurde heruntergefahren.");		
 		
 		
 		

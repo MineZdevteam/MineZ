@@ -22,7 +22,7 @@ public class LoggingMessages implements Listener {
 		Player player = event.getPlayer();
 		String Playername = player.getName();
 		this.log.info("[MineZ] " + Playername + " Hat den Server betreten.");
-		event.setJoinMessage(null);
+		event.setJoinMessage("");
 	}
 	@EventHandler
 	
@@ -34,6 +34,6 @@ public class LoggingMessages implements Listener {
 		String Playername = player.getName();
 		this.log.info("[MineZ] " + Playername + " Hat den Server verlassen.");
 		
-		event.setQuitMessage(null);
+		event.setQuitMessage("");
 	}
 }
