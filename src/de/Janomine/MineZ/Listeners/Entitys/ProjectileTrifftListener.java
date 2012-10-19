@@ -10,7 +10,7 @@ public class ProjectileTrifftListener implements Listener {
 	@EventHandler
 	public void onProjectileHitEvent(ProjectileHitEvent e){
 		if(e.getEntity() instanceof Egg){
-			e.getEntity().getWorld().createExplosion(e.getEntity().getLocation(),2F);
+			e.getEntity().getWorld().createExplosion(e.getEntity().getLocation(),0.0F);
 		}
 	}
 }
