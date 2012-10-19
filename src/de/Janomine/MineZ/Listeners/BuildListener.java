@@ -35,6 +35,7 @@ public class BuildListener implements Listener {
 public void dropMelons(Player p, Location l)
 {
   p.getWorld().dropItemNaturally(l, new ItemStack(Material.MELON));
+  p.getWorld().dropItemNaturally(l, new ItemStack(Material.MELON));
 }
 
 }
