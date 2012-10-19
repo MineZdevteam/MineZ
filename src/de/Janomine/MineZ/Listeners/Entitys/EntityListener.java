@@ -1,4 +1,4 @@
-package de.Janomine.MineZ.Listeners;
+package de.Janomine.MineZ.Listeners.Entitys;
 
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;

@@ -7,14 +7,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import de.Janomine.MineZ.Commands.CommandChatClear;
 import de.Janomine.MineZ.Commands.CommandGlobalmute;
-import de.Janomine.MineZ.Listeners.BuildListener;
-import de.Janomine.MineZ.Listeners.CreativeListener;
-import de.Janomine.MineZ.Listeners.GlobalMuteListener;
-import de.Janomine.MineZ.Listeners.JoinListener;
-import de.Janomine.MineZ.Listeners.LoggingMessages;
-import de.Janomine.MineZ.Listeners.PlayerListener;
-import de.Janomine.MineZ.Listeners.Smylies;
-import de.Janomine.MineZ.Listeners.TodListener;
+import de.Janomine.MineZ.Listeners.Generelles.GlobalMuteListener;
+import de.Janomine.MineZ.Listeners.Generelles.JoinListener;
+import de.Janomine.MineZ.Listeners.Generelles.LoggingMessages;
+import de.Janomine.MineZ.Listeners.Generelles.Smylies;
+import de.Janomine.MineZ.Listeners.Player.BuildListener;
+import de.Janomine.MineZ.Listeners.Player.CreativeListener;
+import de.Janomine.MineZ.Listeners.Player.PlayerListener;
+import de.Janomine.MineZ.Listeners.Player.TodListener;
 
 public class main extends JavaPlugin {
 	

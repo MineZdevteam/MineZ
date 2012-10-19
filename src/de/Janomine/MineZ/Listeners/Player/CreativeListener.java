@@ -1,4 +1,4 @@
-package de.Janomine.MineZ.Listeners;
+package de.Janomine.MineZ.Listeners.Player;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;

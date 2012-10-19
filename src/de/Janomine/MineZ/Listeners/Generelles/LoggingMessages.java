@@ -1,4 +1,4 @@
-package de.Janomine.MineZ.Listeners;
+package de.Janomine.MineZ.Listeners.Generelles;
 
 import java.util.logging.Logger;
 
