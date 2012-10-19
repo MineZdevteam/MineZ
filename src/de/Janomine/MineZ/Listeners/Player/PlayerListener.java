@@ -1,5 +1,6 @@
 package de.Janomine.MineZ.Listeners.Player;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -22,7 +23,9 @@ public class PlayerListener implements Listener {
 			 String Playername = player.getName();
 			 
 			 if (player.getItemInHand().getType() == Material.BOOK_AND_QUILL) {
-				 event.setFormat(player.getDisplayName().replaceAll(":", ChatColor.GREEN + "[Funk] : " + nachricht));
+				 String edit = event.getFormat().replaceAll(":", ChatColor.GREEN + "[Funk]" + ChatColor.RESET +  " : ");
+				 Bukkit.broadcastMessage(edit);
+				 event.setFormat(edit);
 				 return;
 			 }
 			 
