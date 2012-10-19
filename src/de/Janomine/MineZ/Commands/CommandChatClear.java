@@ -12,7 +12,7 @@ public class CommandChatClear implements CommandExecutor {
 	
 
 	  public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-		  
+		  boolean succeed = false;
 		  Player player = (Player)sender;
 
                String Playername = player.getName();
@@ -29,7 +29,7 @@ public class CommandChatClear implements CommandExecutor {
 				            p.sendMessage(" ");
 				            if (x == 119) {
 				              p.sendMessage(ChatColor.GRAY + "Der Chat wurde von " + ChatColor.GREEN +  Playername + ChatColor.GRAY + " Geleert.");
-				              return true;
+				              succeed = true;
 				            }
 				            p.sendMessage(ChatColor.GRAY + "Der Chat wurde von " + ChatColor.GREEN +  Playername + ChatColor.GRAY + " Geleert.");
 				            
@@ -43,7 +43,7 @@ public class CommandChatClear implements CommandExecutor {
 		        		
 		        	}
 		 
-			return false;
+			return succeed;
 	  }
 	  
 }
