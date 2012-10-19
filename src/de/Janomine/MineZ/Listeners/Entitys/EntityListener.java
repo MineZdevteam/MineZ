@@ -14,6 +14,7 @@ public class EntityListener implements Listener  {
 	  
 	      if ((event.getEntityType() == EntityType.ZOMBIE) && (event.getCause() == EntityDamageEvent.DamageCause.FALL)) event.setCancelled(true);
 	      if ((event.getEntityType() == EntityType.ZOMBIE) && (event.getCause() == EntityDamageEvent.DamageCause.FIRE)) event.setCancelled(true);
+	      if ((event.getEntityType() == EntityType.ZOMBIE) && (event.getCause() == EntityDamageEvent.DamageCause.FIRE_TICK)) event.setCancelled(true);
 	      if ((event.getEntityType() == EntityType.GIANT) && ((event.getCause() == EntityDamageEvent.DamageCause.ENTITY_EXPLOSION) || (event.getCause() == EntityDamageEvent.DamageCause.BLOCK_EXPLOSION))) event.setCancelled(true);
 	    }
 	  }
