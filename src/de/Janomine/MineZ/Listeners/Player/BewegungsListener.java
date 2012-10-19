@@ -3,11 +3,12 @@ package de.Janomine.MineZ.Listeners.Player;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-public class BewegungsListener {
+public class BewegungsListener implements Listener {
 
 	
 	@EventHandler
