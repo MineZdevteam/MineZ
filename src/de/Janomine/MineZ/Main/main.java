@@ -10,6 +10,7 @@ import de.Janomine.MineZ.Commands.CommandGlobalmute;
 import de.Janomine.MineZ.Listeners.KickMessageListener;
 import de.Janomine.MineZ.Listeners.Entitys.EntityListener;
 import de.Janomine.MineZ.Listeners.Entitys.ProjectileTrifftListener;
+import de.Janomine.MineZ.Listeners.Entitys.creaturspawn;
 import de.Janomine.MineZ.Listeners.Generelles.GlobalMuteListener;
 import de.Janomine.MineZ.Listeners.Generelles.JoinListener;
 import de.Janomine.MineZ.Listeners.Generelles.LoggingMessages;
@@ -67,6 +68,7 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new ProjectileTrifftListener(), this);
 		getServer().getPluginManager().registerEvents(new BewegungsListener(), this);
 		getServer().getPluginManager().registerEvents(new WorldListener(), this);
+		getServer().getPluginManager().registerEvents(new creaturspawn(), this);
 		//getServer().getPluginManager().registerEvents(new BuildListener(), this); Kommentar in CreativeListener ansehen!
 		getServer().getPluginManager().registerEvents(new CreativeListener(), this); //Dieses Event war nicht registered!
 		this.log.info("[MineZ] Listener geladen und Enabled.");
