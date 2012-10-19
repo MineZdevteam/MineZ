@@ -48,7 +48,7 @@ public class CreativeListener implements Listener {
 			event.setCancelled(true);
 			return;
 		}
-		}
+		}else{event.setCancelled(true);} //s. Oben
 }
 	
 	
@@ -78,13 +78,13 @@ public class CreativeListener implements Listener {
 
 		Player player = event.getPlayer();
 		String Playername = player.getName();
-		
-		if(!player.hasPermission("MineZ.Creative.Drop")) {
-			
-			player.sendMessage(ChatColor.RED + "Du Kannst im Creative Modus keine Items droppen!");
-			event.setCancelled(true);
-			return;
-			
+		if(player.getGameMode() == GameMode.CREATIVE){ // Diese Zeile hast du Vergessen ;)
+			if(!player.hasPermission("MineZ.Creative.Drop")) {				
+				player.sendMessage(ChatColor.RED + "Du Kannst im Creative Modus keine Items droppen!");
+				event.setCancelled(true);
+				return;				
+			}
 		}
+
 	}
 }

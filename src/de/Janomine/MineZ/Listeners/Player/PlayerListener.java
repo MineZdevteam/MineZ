@@ -19,9 +19,10 @@ public class PlayerListener implements Listener {
 			 Player player = event.getPlayer();
 			 String nachricht = event.getMessage();
 			 String Playername = player.getName();
+			 boolean foundone = false;
 			 
 			 if (player.getItemInHand().getType() == Material.BOOK_AND_QUILL) {
-				 event.setMessage(ChatColor.GREEN + "[Funk] " + nachricht);
+				 event.setFormat(player.getDisplayName().replaceAll(":", ChatColor.GREEN + "[Funk] : ") + nachricht);
 				 return;
 			 }
 			 

@@ -16,33 +16,32 @@ public class CommandGlobalmute implements CommandExecutor  {
 	  public static String MuteMessage = "Du kannst nicht Chatten, während Globalmute aktiviert ist.";
 
 	public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
-		
+		boolean succeed = false;
 		 Player p = (Player)sender;
 		 String playername = p.getName();
 		 Player player = (Player)sender;
 		 
 		 if ((cmd.getName().equalsIgnoreCase("Globalmute") || (cmd.getName().equalsIgnoreCase("Gmute"))))  {
-			if(!player.hasPermission("MineZ.Globalmute")) {
-				
-				
+			if(!player.hasPermission("MineZ.Globalmute")) {							
 			player.sendMessage(ChatColor.RED + "Du hast keinen Zugriff auf diesen Befehl!");
-		  return true;
-	
-}
+		    succeed =  true;	
+			}else{
+				
+			}
 			 if (Muted) {
 		         Bukkit.broadcastMessage(ChatColor.WHITE + "[" + ChatColor.GRAY + "MineZ" + ChatColor.WHITE + "]" + ChatColor.GREEN + " Globalmute wurde Deaktiviert.");
-		          this.logger.info("[MineZ] Globalmute wurde von "  + player.getName() + " Aktiviert.");
+		          this.logger.info("[MineZ] Globalmute wurde von "  + player.getName() + " dektiviert."); //Hier stand Aktiviert
 		          Muted = false;
-		          return true;
+		          succeed =  true;
 		        }
 		        else {
 		        	 Bukkit.broadcastMessage(ChatColor.WHITE + "[" + ChatColor.GRAY + "MineZ" + ChatColor.WHITE + "]" + ChatColor.GREEN + " Globalmute wurde Aktiviert.");
 		          this.logger.info("[MineZ] Globalmute wurde von "  + player.getName() + " Aktiviert.");
 		          Muted = true;	
-		          return true;
+		          succeed =  true;
 		        }	
 		 }
-		return false;
+		return succeed;
 
 
 	}
