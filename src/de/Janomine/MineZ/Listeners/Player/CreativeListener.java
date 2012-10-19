@@ -29,7 +29,7 @@ public class CreativeListener implements Listener {
 			event.setCancelled(true);
 			return;
 		}
-		}
+		}else{event.setCancelled(true);} //Dadurch wird der BuildListener überflüssig. ACHTUNG Buildlistener aus den registered Events kommentiert!
 		
 	}
 	@EventHandler

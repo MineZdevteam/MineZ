@@ -57,7 +57,8 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new GlobalMuteListener(), this);
 		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 		getServer().getPluginManager().registerEvents(new TodListener(), this);
-		getServer().getPluginManager().registerEvents(new BuildListener(), this);
+		//getServer().getPluginManager().registerEvents(new BuildListener(), this); Kommentar in CreativeListener ansehen!
+		getServer().getPluginManager().registerEvents(new CreativeListener(), this); //Dieses Event war nicht registered!
 		this.log.info("[MineZ] Listener geladen und Enabled.");
 	}
 
