@@ -1,0 +1,11 @@
+name: MineZ
+version: 1.5
+author: Janomine
+main: de.Janomine.MineZ.Main.main
+commands:
+  ChatClear:
+       description: Zum loeschen des chats.
+       usage: /Chatclear
+  Globalmute:
+       description: Schaltet den Globalen Chat Ein/aus.
+       usage: /Globalmute
