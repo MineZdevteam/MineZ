@@ -10,6 +10,7 @@ import de.Janomine.MineZ.Commands.CommandGlobalmute;
 import de.Janomine.MineZ.Listeners.BuildListener;
 import de.Janomine.MineZ.Listeners.CreativeListener;
 import de.Janomine.MineZ.Listeners.GlobalMuteListener;
+import de.Janomine.MineZ.Listeners.JoinListener;
 import de.Janomine.MineZ.Listeners.LoggingMessages;
 import de.Janomine.MineZ.Listeners.PlayerListener;
 import de.Janomine.MineZ.Listeners.Smylies;
@@ -52,6 +53,7 @@ public class main extends JavaPlugin {
 		this.log.info("[MineZ] Listener Werden geladen.");
 		getServer().getPluginManager().registerEvents(new LoggingMessages(), this);
 		getServer().getPluginManager().registerEvents(new Smylies(), this);
+		getServer().getPluginManager().registerEvents(new JoinListener(), this);
 		getServer().getPluginManager().registerEvents(new GlobalMuteListener(), this);
 		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 		getServer().getPluginManager().registerEvents(new TodListener(), this);
