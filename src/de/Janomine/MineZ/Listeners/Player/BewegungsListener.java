@@ -12,8 +12,8 @@ public class BewegungsListener implements Listener {
 
 	
 	@EventHandler
-	public void onPlayerMoveEvent(PlayerMoveEvent e){
-		if(e.getPlayer().getWorld().getTime() >= 12500){e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,2000,11));	}else{e.getPlayer().removePotionEffect(PotionEffectType.BLINDNESS);}
-		
+	public void NachtBlind(PlayerMoveEvent e){
+		//if(e.getPlayer().getWorld().getTime() >= 12500){e.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,200,1));	}else{e.getPlayer().removePotionEffect(PotionEffectType.BLINDNESS);}
+		//Aktuell für Tests deaktiviert.
 	}
 }
