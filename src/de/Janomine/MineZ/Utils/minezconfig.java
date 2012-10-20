@@ -9,6 +9,7 @@ import java.io.OutputStream;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class minezconfig extends JavaPlugin {
@@ -18,13 +19,14 @@ public class minezconfig extends JavaPlugin {
 
 	public minezconfig(String filename){
 		Bukkit.broadcastMessage("!");
-		configFile = new File(getDataFolder(), filename + ".yml");
 		_filename = filename;
+		configFile = new File(getDataFolder(), _filename + ".yml");
 	    try {
 	        firstRun();
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
+	    config = new YamlConfiguration();
 	    loadYaml();
 	    saveYaml();
 	}
@@ -44,7 +46,7 @@ public class minezconfig extends JavaPlugin {
 	}
 	private void firstRun() throws Exception {
 	    if(!configFile.exists()){
-	        configFile.getParentFile().mkdirs();
+	        configFile.getParentFile().mkdir();
 	        copy(getResource(_filename + ".yml"), configFile);
 	    }
 	}
