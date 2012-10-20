@@ -27,10 +27,8 @@ public class PlayerListener implements Listener {
 				 event.setFormat(edit);
 				 return;
 			 }
-			 
 		 }
-	
 }
-
+		
 	
 

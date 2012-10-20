@@ -15,10 +15,10 @@ public class JoinListener implements Listener {
 	public void Join(PlayerJoinEvent event) {
 		Player player = event.getPlayer();
 		player.sendMessage(ChatColor.GREEN + "MineZ");
-		player.sendMessage(ChatColor.RED + "Willkommen auf dem Deutschen " + ChatColor.GREEN + "MineZ " + ChatColor.RED + "Server.");
+		player.sendMessage(ChatColor.RED + "Willkommen auf dem Deutschen " + ChatColor.GREEN + "ⓂⓘⓝⓔⓏ " + ChatColor.RED + "Server.");
 		player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 7, 400)); // 80 sind 4 Sekunden, 20 Ticks = 1 Sekunde  ^^ War ein bisschen kurz ;D
-	    //player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 80, 1));   Sinn?
-	    //player.addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 70, 3));   Sinn?
+	    player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 50, 1));   
+	    
 		
 	}
 
