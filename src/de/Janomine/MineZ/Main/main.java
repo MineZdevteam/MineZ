@@ -25,6 +25,7 @@ import de.Janomine.MineZ.Listeners.Player.CreativeListener;
 import de.Janomine.MineZ.Listeners.Player.PlayerListener;
 import de.Janomine.MineZ.Listeners.Player.SpielerSchadenListener;
 import de.Janomine.MineZ.Listeners.Player.TodListener;
+import de.Janomine.MineZ.Listeners.World.ExplosionsListener;
 import de.Janomine.MineZ.Listeners.World.WorldListener;
 
 public class main extends JavaPlugin {
@@ -74,6 +75,7 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new WorldListener(), this);
 		getServer().getPluginManager().registerEvents(new creaturspawn(this), this);
 		getServer().getPluginManager().registerEvents(new EntityByEntityListener(), this);
+		//getServer().getPluginManager().registerEvents(new ExplosionsListener(), this);   NullPointer und keine AHnung warum :/
 		//getServer().getPluginManager().registerEvents(new BuildListener(), this); Kommentar in CreativeListener ansehen!
 		getServer().getPluginManager().registerEvents(new CreativeListener(), this); //Dieses Event war nicht registered ^^
 		this.log.info("[MineZ] Listener geladen und Enabled.");
