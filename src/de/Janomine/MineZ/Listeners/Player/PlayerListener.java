@@ -24,7 +24,6 @@ public class PlayerListener implements Listener {
 			 
 			 if (player.getItemInHand().getType() == Material.BOOK_AND_QUILL) {
 				 String edit = event.getFormat().replaceAll(":", ChatColor.GREEN + "[Funk]" + ChatColor.RESET +  " : ");
-				 Bukkit.broadcastMessage(edit);
 				 event.setFormat(edit);
 				 return;
 			 }

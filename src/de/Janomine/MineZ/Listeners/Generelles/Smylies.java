@@ -9,7 +9,7 @@ public class Smylies implements Listener {
 	@EventHandler
 	
 	public void Smylies(AsyncPlayerChatEvent event) {		
-			event.setMessage(event.getMessage().replaceAll(":D", "TEST")); //fixed.
+			event.setMessage(event.getMessage().replaceAll(":D", ":`~D")); //fixed.
 			}
 
 }
