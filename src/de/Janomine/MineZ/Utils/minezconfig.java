@@ -18,7 +18,6 @@ public class minezconfig extends JavaPlugin {
     private File configFile;
 
 	public minezconfig(String filename){
-		Bukkit.broadcastMessage("!");
 		_filename = filename;
 		configFile = new File(getDataFolder(), _filename + ".yml");
 	    try {
