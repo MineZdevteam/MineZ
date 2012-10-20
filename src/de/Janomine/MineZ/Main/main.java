@@ -1,13 +1,30 @@
 package de.Janomine.MineZ.Main;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Random;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.command.PluginCommand;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -32,7 +49,7 @@ import de.Janomine.MineZ.Listeners.Player.SpielerSchadenListener;
 import de.Janomine.MineZ.Listeners.Player.TodListener;
 import de.Janomine.MineZ.Listeners.World.ExplosionsListener;
 import de.Janomine.MineZ.Listeners.World.WorldListener;
-import de.Janomine.MineZ.Utils.minezconfig;
+
 
 public class main extends JavaPlugin {
 	 public List<Zombie> zombieinv = new ArrayList<Zombie>();
@@ -40,6 +57,9 @@ public class main extends JavaPlugin {
 	
 	public final Logger log = Logger.getLogger("Minecraft");
 	
+	  
+	
+
 	
 	public void onEnable() {
 		
@@ -48,11 +68,12 @@ public class main extends JavaPlugin {
 		registerListeners();
 		loadfiles();
 		this.log.info("[MineZ] Files. geladen.");
+		loading();
 	}
 	
 	private void loadfiles() {
-		minezconfig mconfig = new minezconfig("config");
-		this.log.info(mconfig.getString("meldung.config.loaded"));
+		//minezconfig mconfig = new minezconfig("config");
+		//his.log.info(mconfig.getString("meldung.config.loaded"));
 	}
 
 	public void onLoad() {
@@ -97,10 +118,19 @@ public class main extends JavaPlugin {
 
 	
 	public void setCommands() {
-		getCommand("MineZ").setExecutor(new CommandMineZ());
-		getCommand("MZ").setExecutor(new CommandMineZ());
+		getCommand("MineZ").setExecutor(new CommandMineZ(this));
+		getCommand("MZ").setExecutor(new CommandMineZ(this));
 		getCommand("ChatClear").setExecutor(new CommandChatClear());
 		getCommand("Globalmute").setExecutor(new CommandGlobalmute());
 		this.log.info("[MineZ] Commands Listener Enabled.");
 	}
+public void loading() {
+	
+	
 }
+	
+
+
+}
+
+

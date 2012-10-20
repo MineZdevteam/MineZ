@@ -13,10 +13,17 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import de.Janomine.MineZ.Main.main;
+
 public class CommandMineZ implements CommandExecutor {
 	
 	public final Logger logger = Logger.getLogger("Minecraft");
-	
+	 private final main plugin;
+
+	  public CommandMineZ(main instance)
+	  {
+	    this.plugin = instance;
+	  }
 	public boolean onCommand(CommandSender sender, Command cmd, String alias, String[] args) {
 		boolean succeed = false;
 		 Player p = (Player)sender;
@@ -48,11 +55,15 @@ public class CommandMineZ implements CommandExecutor {
 			 player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.BOOK_AND_QUILL, 1) });
 			 player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,50,1));
 			 player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,120,6));
+			 Location newlocation = Location.add(20, 40, 50);
+			   player.teleport(newlocation);
+	      }
+	    }
 			//Hier muss dann das porten an eine zufällige Stelle in der Welt hin.
 			 //Die koordinaten kommen dann in eine config. kk ?
-			 return true;
+			
 		 
-		 }}
+		 
 		return false;
 	}
 
