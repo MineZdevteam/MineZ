@@ -75,7 +75,7 @@ public class main extends JavaPlugin {
 	private void registerListeners() {
 		this.log.info("[MineZ] Listener Werden geladen.");
 		getServer().getPluginManager().registerEvents(new LoggingMessages(), this);
-		getServer().getPluginManager().registerEvents(new Smylies(), this);
+		//getServer().getPluginManager().registerEvents(new Smylies(), this); //Deaktiviert wegen Bugs.
 		getServer().getPluginManager().registerEvents(new JoinListener(), this);
 		getServer().getPluginManager().registerEvents(new GlobalMuteListener(), this);
 		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
