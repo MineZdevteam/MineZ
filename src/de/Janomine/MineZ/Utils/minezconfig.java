@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -16,6 +17,7 @@ public class minezconfig extends JavaPlugin {
     private File configFile;
 
 	public minezconfig(String filename){
+		Bukkit.broadcastMessage("!");
 		configFile = new File(getDataFolder(), filename + ".yml");
 		_filename = filename;
 	    try {
