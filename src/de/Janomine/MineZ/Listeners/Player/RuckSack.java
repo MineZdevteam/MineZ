@@ -13,18 +13,19 @@ import org.bukkit.inventory.ItemStack;
 
 public class RuckSack implements Listener {
 	
+	@EventHandler
+	@SuppressWarnings("deprecation")
 	public void Rucksack(PlayerInteractEvent event) {
 		
 		Player player = event.getPlayer();
 		String Playername = player.getName();		
-		
 		 if (player.getItemInHand().getType() == Material.CHEST) {
 			 if (event.getAction() == Action.RIGHT_CLICK_AIR) {
-		 
 				 Inventory inv = 
 				            Bukkit.createInventory(player, 54, "Rucksack");
 				          player.openInventory(inv);
-		player.sendMessage("§8Rucksack geöffnet.");
+				          player.updateInventory();
+				          player.sendMessage("§8Rucksack geöffnet.");
 		
 	}
 			 

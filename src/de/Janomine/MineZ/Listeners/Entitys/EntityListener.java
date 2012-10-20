@@ -1,6 +1,7 @@
 package de.Janomine.MineZ.Listeners.Entitys;
 
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;

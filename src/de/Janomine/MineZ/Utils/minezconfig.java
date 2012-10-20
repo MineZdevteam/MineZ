@@ -13,13 +13,13 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class minezconfig extends JavaPlugin {
-	private String _filename;
+	private String myfilename;
 	private FileConfiguration config;
     private File configFile;
 
 	public minezconfig(String filename){
-		_filename = filename;
-		configFile = new File(getDataFolder(),( _filename + ".yml"));
+		myfilename = filename;
+		configFile = new File(getDataFolder(),( myfilename + ".yml"));
 	    try {
 	        firstRun();
 	    } catch (Exception e) {
@@ -45,9 +45,11 @@ public class minezconfig extends JavaPlugin {
 	    }
 	}
 	private void firstRun() throws Exception {
+		System.out.println("3");
 	    if(!configFile.exists()){
+	    	System.out.println("4");
 	        configFile.getParentFile().mkdirs();
-	        copy(getResource(_filename + ".yml"), configFile);
+	        copy(getResource(myfilename + ".yml"), configFile);
 	    }
 	}
 	private void copy(InputStream in, File file) {
@@ -104,7 +106,7 @@ public class minezconfig extends JavaPlugin {
 		return config.contains(path);
 	}
 	public void toDefault() throws FileNotFoundException{
-		copy(getResource(_filename + ".yml"), configFile);
+		copy(getResource(myfilename + ".yml"), configFile);
 	}
 	public void createSection(String path){
 		config.createSection(path);

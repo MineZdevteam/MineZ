@@ -1,5 +1,6 @@
 package de.Janomine.MineZ.Main;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -23,6 +24,7 @@ import de.Janomine.MineZ.Listeners.Player.BewegungsListener;
 import de.Janomine.MineZ.Listeners.Player.BuildListener;
 import de.Janomine.MineZ.Listeners.Player.CreativeListener;
 import de.Janomine.MineZ.Listeners.Player.PlayerListener;
+import de.Janomine.MineZ.Listeners.Player.RuckSack;
 import de.Janomine.MineZ.Listeners.Player.SpielerSchadenListener;
 import de.Janomine.MineZ.Listeners.Player.TodListener;
 import de.Janomine.MineZ.Listeners.World.ExplosionsListener;
@@ -82,7 +84,8 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new WorldListener(), this);
 		getServer().getPluginManager().registerEvents(new creaturspawn(this), this);
 		getServer().getPluginManager().registerEvents(new EntityByEntityListener(), this);
-		getServer().getPluginManager().registerEvents(new ExplosionsListener(), this); //  NullPointer und keine AHnung warum :/
+		getServer().getPluginManager().registerEvents(new ExplosionsListener(), this);
+		getServer().getPluginManager().registerEvents(new RuckSack(), this);
 		//getServer().getPluginManager().registerEvents(new BuildListener(), this); Kommentar in CreativeListener ansehen!
 		getServer().getPluginManager().registerEvents(new CreativeListener(), this); //Dieses Event war nicht registered ^^
 		this.log.info("[MineZ] Listener geladen und Enabled.");
