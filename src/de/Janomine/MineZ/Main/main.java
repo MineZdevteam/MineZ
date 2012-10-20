@@ -11,6 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import de.Janomine.MineZ.Commands.CommandChatClear;
 import de.Janomine.MineZ.Commands.CommandGlobalmute;
 import de.Janomine.MineZ.Listeners.KickMessageListener;
+import de.Janomine.MineZ.Listeners.Entitys.EntityByEntityListener;
 import de.Janomine.MineZ.Listeners.Entitys.EntityListener;
 import de.Janomine.MineZ.Listeners.Entitys.ProjectileTrifftListener;
 import de.Janomine.MineZ.Listeners.Entitys.creaturspawn;
@@ -72,6 +73,7 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new BewegungsListener(), this);
 		getServer().getPluginManager().registerEvents(new WorldListener(), this);
 		getServer().getPluginManager().registerEvents(new creaturspawn(this), this);
+		getServer().getPluginManager().registerEvents(new EntityByEntityListener(), this);
 		//getServer().getPluginManager().registerEvents(new BuildListener(), this); Kommentar in CreativeListener ansehen!
 		getServer().getPluginManager().registerEvents(new CreativeListener(), this); //Dieses Event war nicht registered ^^
 		this.log.info("[MineZ] Listener geladen und Enabled.");
