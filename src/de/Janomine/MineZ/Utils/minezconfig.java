@@ -19,7 +19,7 @@ public class minezconfig extends JavaPlugin {
 
 	public minezconfig(String filename){
 		_filename = filename;
-		configFile = new File(getDataFolder(), _filename + ".yml");
+		configFile = new File(getDataFolder(),( _filename + ".yml"));
 	    try {
 	        firstRun();
 	    } catch (Exception e) {
@@ -27,6 +27,7 @@ public class minezconfig extends JavaPlugin {
 	    }
 	    config = new YamlConfiguration();
 	    loadYaml();
+	    System.out.println("2");
 	    saveYaml();
 	}
 	public void saveYaml() {
@@ -45,12 +46,13 @@ public class minezconfig extends JavaPlugin {
 	}
 	private void firstRun() throws Exception {
 	    if(!configFile.exists()){
-	        configFile.getParentFile().mkdir();
+	        configFile.getParentFile().mkdirs();
 	        copy(getResource(_filename + ".yml"), configFile);
 	    }
 	}
 	private void copy(InputStream in, File file) {
 	    try {
+	    	System.out.println("1");
 	        OutputStream out = new FileOutputStream(file);
 	        byte[] buf = new byte[1024];
 	        int len;
