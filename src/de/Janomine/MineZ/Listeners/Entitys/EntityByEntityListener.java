@@ -17,8 +17,8 @@ public class EntityByEntityListener implements Listener {
 			
 			Zombie z = (Zombie) e.getEntity();
 			int l = z.getHealth() + e.getDamage();
-			if(!(z.getHealth() + 2 > z.getMaxHealth()) && !((z.getHealth() + 2) > l)){
-				z.setHealth(z.getHealth() + 2);
+			if(!(z.getHealth() + 1 > z.getMaxHealth()) && !((z.getHealth() + 1) > l)){
+				z.setHealth(z.getHealth() + 1);
 			}
 		}
 	}
