@@ -41,7 +41,7 @@ public class main extends JavaPlugin {
 		setCommands();
 		registerListeners();
 		loadfiles();
-		
+		this.log.info("[MineZ] Files. geladen.");
 	}
 	
 	private void loadfiles() {
