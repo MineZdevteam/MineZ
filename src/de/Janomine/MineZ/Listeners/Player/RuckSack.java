@@ -13,6 +13,8 @@ import org.bukkit.inventory.ItemStack;
 
 public class RuckSack implements Listener {
 	
+	
+	@EventHandler
 	public void Rucksack(PlayerInteractEvent event) {
 		
 		Player player = event.getPlayer();
