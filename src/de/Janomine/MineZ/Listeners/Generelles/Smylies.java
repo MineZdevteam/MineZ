@@ -10,10 +10,10 @@ public class Smylies implements Listener {
 	@EventHandler
 	
 	public void Smylies(AsyncPlayerChatEvent event) {		
-			event.setMessage(event.getMessage().replaceAll(":D", "☻")); 
-			event.setMessage(event.getMessage().replaceAll("<3", "❤")); 
-			event.setMessage(event.getMessage().replaceAll("[Spritze]", "┣▇▇▇═──"));
-			event.setMessage(event.getMessage().replaceAll("[o.O]", "⊙_ʘ"));
+			//event.setMessage(event.getMessage().replaceAll(":D", "☻")); 
+			//event.setMessage(event.getMessage().replaceAll("<3", "❤")); 
+			//event.setMessage(event.getMessage().replaceAll("[Spritze]", "┣▇▇▇═──"));
+			//event.setMessage(event.getMessage().replaceAll("[o.O]", "⊙_ʘ"));
 			
 			}
 
