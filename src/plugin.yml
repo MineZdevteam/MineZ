@@ -1,6 +1,6 @@
 name: MineZ
 version: 1.6.2
-author: Janomine
+author: Janomine,Ch4tr4
 main: de.Janomine.MineZ.Main.main
 commands:
   ChatClear:
