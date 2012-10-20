@@ -23,6 +23,8 @@ public class minezconfig extends JavaPlugin {
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
+	    loadYaml();
+	    saveYaml();
 	}
 	public void saveYaml() {
 	    try {
@@ -103,6 +105,6 @@ public class minezconfig extends JavaPlugin {
 		config.createSection(path);
 	}
 	public FileConfiguration getFConfig(){
-		return config;
+		return config;	
 	}
 }

@@ -1,0 +1,3 @@
+meldung:
+ config:
+  loaded: 'Config geladen!'

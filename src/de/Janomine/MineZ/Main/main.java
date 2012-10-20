@@ -27,6 +27,7 @@ import de.Janomine.MineZ.Listeners.Player.SpielerSchadenListener;
 import de.Janomine.MineZ.Listeners.Player.TodListener;
 import de.Janomine.MineZ.Listeners.World.ExplosionsListener;
 import de.Janomine.MineZ.Listeners.World.WorldListener;
+import de.Janomine.MineZ.Utils.minezconfig;
 
 public class main extends JavaPlugin {
 	 public List<Entity> allspawned = new ArrayList<Entity>();
@@ -39,9 +40,15 @@ public class main extends JavaPlugin {
 		this.log.info("[MineZ] Plugin wird geladen.");
 		setCommands();
 		registerListeners();
+		loadfiles();
 		
 	}
 	
+	private void loadfiles() {
+		minezconfig mconfig = new minezconfig("config");
+		this.log.info(mconfig.getString("meldung.config.loaded"));
+	}
+
 	public void onLoad() {
 		
 		this.log.info("[MineZ] System geladen.");
