@@ -1,6 +1,7 @@
 package de.Janomine.MineZ.Utils;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -70,5 +71,38 @@ public class minezconfig extends JavaPlugin {
 			status = true;
 		}catch(Exception e){status = false;}
 		return status;
+	}
+	public double getDouble(String path){
+		return config.getDouble(path);
+	}
+	public boolean getBoolean(String path){
+		return config.getBoolean(path);
+	}
+	public Object get(String path){
+		return config.get(path);
+	}
+	public void set(String path, int value){
+		config.set(path, value);
+	}
+	public void set(String path, boolean value){
+		config.set(path, value);
+	}
+	public void set(String path, String value){
+		config.set(path, value);
+	}
+	public void set(String path, Double value){
+		config.set(path, value);
+	}
+	public boolean contains(String path){
+		return config.contains(path);
+	}
+	public void toDefault() throws FileNotFoundException{
+		copy(getResource(_filename + ".yml"), configFile);
+	}
+	public void createSection(String path){
+		config.createSection(path);
+	}
+	public FileConfiguration getFConfig(){
+		return config;
 	}
 }
