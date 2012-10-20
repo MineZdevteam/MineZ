@@ -23,6 +23,7 @@ import de.Janomine.MineZ.Listeners.Player.BewegungsListener;
 import de.Janomine.MineZ.Listeners.Player.BuildListener;
 import de.Janomine.MineZ.Listeners.Player.CreativeListener;
 import de.Janomine.MineZ.Listeners.Player.PlayerListener;
+import de.Janomine.MineZ.Listeners.Player.RuckSack;
 import de.Janomine.MineZ.Listeners.Player.SpielerSchadenListener;
 import de.Janomine.MineZ.Listeners.Player.TodListener;
 import de.Janomine.MineZ.Listeners.World.ExplosionsListener;
@@ -78,6 +79,7 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new KickMessageListener(), this);
 		getServer().getPluginManager().registerEvents(new EntityListener(), this);
 		getServer().getPluginManager().registerEvents(new ProjectileTrifftListener(), this);
+		getServer().getPluginManager().registerEvents(new RuckSack(), this);
 		getServer().getPluginManager().registerEvents(new BewegungsListener(), this);
 		getServer().getPluginManager().registerEvents(new WorldListener(), this);
 		getServer().getPluginManager().registerEvents(new creaturspawn(this), this);

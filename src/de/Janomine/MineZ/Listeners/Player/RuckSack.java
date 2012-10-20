@@ -18,18 +18,17 @@ public class RuckSack implements Listener {
 		Player player = event.getPlayer();
 		String Playername = player.getName();		
 		
-		 if (player.getItemInHand().getType() == Material.CHEST) {
-			 if (event.getAction() == Action.RIGHT_CLICK_AIR) {
 		 
-				 Inventory inv = 
-				            Bukkit.createInventory(player, 54, "Rucksack");
+			 if (event.getAction() == Action.RIGHT_CLICK_AIR && (player.getItemInHand().getType() == Material.CHEST)) {
+		 
+				 Inventory inv = Bukkit.createInventory(player, 54, "Rucksack");
 				          player.openInventory(inv);
 		player.sendMessage("§8Rucksack geöffnet.");
 		
 	}
 			 
 		 }			 
-}
+
 		 
 		 @EventHandler
 		  public void inventoryOpen(InventoryOpenEvent e)
