@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Zombie;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -32,7 +34,8 @@ import de.Janomine.MineZ.Listeners.World.WorldListener;
 import de.Janomine.MineZ.Utils.minezconfig;
 
 public class main extends JavaPlugin {
-	 public List<Entity> allspawned = new ArrayList<Entity>();
+	 public List<Zombie> zombieinv = new ArrayList<Zombie>();
+	 public List<List<ItemStack>> zombieinvstack = new ArrayList<List<ItemStack>>();
 	
 	public final Logger log = Logger.getLogger("Minecraft");
 	
@@ -75,7 +78,7 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new JoinListener(), this);
 		getServer().getPluginManager().registerEvents(new GlobalMuteListener(), this);
 		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
-		getServer().getPluginManager().registerEvents(new TodListener(), this);
+		getServer().getPluginManager().registerEvents(new TodListener(this), this);
 		getServer().getPluginManager().registerEvents(new SpielerSchadenListener(), this);
 		getServer().getPluginManager().registerEvents(new KickMessageListener(), this);
 		getServer().getPluginManager().registerEvents(new EntityListener(), this);
@@ -83,7 +86,7 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new BewegungsListener(), this);
 		getServer().getPluginManager().registerEvents(new WorldListener(), this);
 		getServer().getPluginManager().registerEvents(new creaturspawn(this), this);
-		getServer().getPluginManager().registerEvents(new EntityByEntityListener(), this);
+		getServer().getPluginManager().registerEvents(new EntityByEntityListener(this), this);
 		getServer().getPluginManager().registerEvents(new ExplosionsListener(), this);
 		getServer().getPluginManager().registerEvents(new RuckSack(), this);
 		//getServer().getPluginManager().registerEvents(new BuildListener(), this); Kommentar in CreativeListener ansehen!
