@@ -1,7 +1,10 @@
 package de.Janomine.MineZ.Main;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
+import org.bukkit.entity.Entity;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -24,7 +27,7 @@ import de.Janomine.MineZ.Listeners.Player.TodListener;
 import de.Janomine.MineZ.Listeners.World.WorldListener;
 
 public class main extends JavaPlugin {
-	
+	 public List<Entity> allspawned = new ArrayList<Entity>();
 	
 	public final Logger log = Logger.getLogger("Minecraft");
 	
@@ -68,9 +71,9 @@ public class main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new ProjectileTrifftListener(), this);
 		getServer().getPluginManager().registerEvents(new BewegungsListener(), this);
 		getServer().getPluginManager().registerEvents(new WorldListener(), this);
-		getServer().getPluginManager().registerEvents(new creaturspawn(), this);
+		getServer().getPluginManager().registerEvents(new creaturspawn(this), this);
 		//getServer().getPluginManager().registerEvents(new BuildListener(), this); Kommentar in CreativeListener ansehen!
-		getServer().getPluginManager().registerEvents(new CreativeListener(), this); //Dieses Event war nicht registered!
+		getServer().getPluginManager().registerEvents(new CreativeListener(), this); //Dieses Event war nicht registered ^^
 		this.log.info("[MineZ] Listener geladen und Enabled.");
 	}
 
