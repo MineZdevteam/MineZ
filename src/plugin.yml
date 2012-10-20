@@ -9,3 +9,9 @@ commands:
   Globalmute:
        description: Schaltet den Globalen Chat Ein/aus.
        usage: /Globalmute
+  MineZ:
+       description: MineZ Hautpcommand
+       usage: /MineZ [Command]
+  MZ:
+       description: MineZ Hautpcommand
+       usage: /MZ [Command]

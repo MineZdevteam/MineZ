@@ -13,6 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import de.Janomine.MineZ.Commands.CommandChatClear;
 import de.Janomine.MineZ.Commands.CommandGlobalmute;
+import de.Janomine.MineZ.Commands.CommandMineZ;
 import de.Janomine.MineZ.Listeners.KickMessageListener;
 import de.Janomine.MineZ.Listeners.Entitys.EntityByEntityListener;
 import de.Janomine.MineZ.Listeners.Entitys.EntityListener;
@@ -96,7 +97,8 @@ public class main extends JavaPlugin {
 
 	
 	public void setCommands() {
-	
+		getCommand("MineZ").setExecutor(new CommandMineZ());
+		getCommand("MZ").setExecutor(new CommandMineZ());
 		getCommand("ChatClear").setExecutor(new CommandChatClear());
 		getCommand("Globalmute").setExecutor(new CommandGlobalmute());
 		this.log.info("[MineZ] Commands Listener Enabled.");
