@@ -53,6 +53,7 @@ public class CommandMineZ implements CommandExecutor {
 			 player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.PAPER, 1) });
 			 player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.WOOD_SWORD, 1) });
 			 player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.BOOK_AND_QUILL, 1) });
+			 player.getInventory().addItem(new ItemStack[] { new ItemStack(Material.ROTTEN_FLESH, 1) });
 			 player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS,50,1));
 			 player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION,120,6));
 			 Location newlocation = Location.add(20, 40, 50);
